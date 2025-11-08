@@ -1,0 +1,23 @@
+{
+  "name": "dashboard.srv",
+  "version": "0.1.0",
+  "description": "Live web streaming wrapper for the existing dashboard monitor script.",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/server.js",
+    "dev": "NODE_ENV=development node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@xterm/addon-serialize": "^0.13.0",
+    "@xterm/headless": "^5.5.0",
+    "@xterm/xterm": "^5.5.0",
+    "koa": "^2.15.5",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
+    "node-pty": "^1.0.0",
+    "ws": "^8.18.0"
+  }
+}

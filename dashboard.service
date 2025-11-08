@@ -1,0 +1,19 @@
+[Unit]
+Description=Dashboard live web console
+After=network.target
+
+[Service]
+Type=simple
+User=leask
+WorkingDirectory=/home/leask/dashboard
+Environment=NODE_ENV=production
+Environment=PORT=8098
+Environment=HOST=0.0.0.0
+Environment=DASHBOARD_SCRIPT=/home/leask/dotfiles/dashboard
+ExecStart=/usr/bin/env node src/server.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target
